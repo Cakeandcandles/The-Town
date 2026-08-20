@@ -4,18 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The Town</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect fill='%2312100e' width='16' height='16'/%3E%3Cpolygon fill='%23d7b56a' points='8,2 14,14 2,14'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
 </head>
-    <body>
+<body class="intro">
+  <div class="grain"></div>
+  <header>
     <h1 id="top">The Town</h1>
-    <div id="container">
-            <div id="messages"></div>
-            <div id="button-area">
-                <button id="action" hidden>Walk around</button>
-                <div id="resources"></div>
-            </div>
+    <p id="status">After the flood</p>
+  </header>
+  <div id="horizon">
+    <div class="rain"></div>
+    <div id="settlement">
+      <div class="ruin r1"></div>
+      <div class="ruin r2"></div>
+      <div class="ruin r3"></div>
     </div>
-    <script src="script.js"></script>
+    <div class="earth"></div>
+  </div>
+  <div id="container">
+    <div id="messages"></div>
+    <div id="button-area">
+      <button id="action" hidden><span>Walk around</span></button>
+      <button id="skip-btn" hidden><span>Skip to the Square</span></button>
+      <div id="resources"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
-
 </html>
