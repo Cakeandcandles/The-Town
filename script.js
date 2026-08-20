@@ -98,6 +98,7 @@ function addHutSilhouette() {
 }
 
 function cooldown(btn, ms, done) {
+  if (btn.classList.contains("cooldown")) return;
   btn.classList.add("cooldown");
   btn.style.setProperty("--cd", `${ms}ms`);
   setTimeout(() => {
@@ -221,6 +222,7 @@ function goToSquare() {
 
 function finishIntro() {
   button.removeEventListener("click", buildShelter);
+  button.hidden = true;
   setTimeout(() => {
     tell([
       "Night settles on the wreckage",

@@ -399,7 +399,18 @@ function afterBuild() {
   }
   if (state.people >= 6 && state.palisade && state.well && !state.hall) {
     els.hall.hidden = false;
-    tell("The bones of a town are here. You could raise a hall.", { kind: "good" });
+    if (!state.flags.hintHall) {
+      state.flags.hintHall = true;
+      tell("The bones of a town are here. You could raise a hall.", { kind: "good" });
+    }
+  }
+  if (state.well && !state.barn && !state.flags.hintBarn) {
+    state.flags.hintBarn = true;
+    tell("A barn would call people in from the road", { kind: "good" });
+  }
+  if (state.flags.metal && !state.forge && !state.flags.hintForge) {
+    state.flags.hintForge = true;
+    tell("A forge would put better tools in every hand", { kind: "good" });
   }
 }
 

@@ -321,6 +321,7 @@ body.walled .palisade {
   border-radius: 2px 2px 0 0;
   animation: wander 11s ease-in-out infinite;
   z-index: 6;
+  bottom: -18px;
 }
 
 .person::after {
@@ -429,8 +430,12 @@ body.walled .palisade {
   background: #ead7a8;
 }
 
-#button-area button.event.bad {
-  background: #e3b6aa;
+#hall-btn {
+  background: #ead7a8;
+}
+
+#hall-btn:hover:not(:disabled):not(.cooldown) {
+  background: #f3e3b6;
 }
 
 #resources {
