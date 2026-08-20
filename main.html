@@ -6,16 +6,29 @@
   <title>The Town</title>
   <link rel="stylesheet" href="style.css">
 </head>
-    <body>
+<body class="intro">
+  <div class="grain"></div>
+  <header>
     <h1 id="top">The Town</h1>
-    <div id="container">
-            <div id="messages"></div>
-            <div id="button-area">
-                <button id="action" hidden>Walk around</button>
-                <div id="resources"></div>
-            </div>
+    <p id="status">After the flood</p>
+  </header>
+  <div id="horizon">
+    <div class="rain"></div>
+    <div id="settlement">
+      <div class="ruin r1"></div>
+      <div class="ruin r2"></div>
+      <div class="ruin r3"></div>
     </div>
-    <script src="script.js"></script>
+    <div class="earth"></div>
+  </div>
+  <div id="container">
+    <div id="messages"></div>
+    <div id="button-area">
+      <button id="action" hidden><span>Walk around</span></button>
+      <button id="skip-btn" hidden><span>Skip to the Square</span></button>
+      <div id="resources"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
-
 </html>
